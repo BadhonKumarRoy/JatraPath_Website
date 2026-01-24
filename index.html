@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="icon" href="Images/logojp.jpeg">
+ <title>Jatrapath</title>
+
+ <!-- swiper cdn link -->
+ <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+ <!-- font awesome cdn link  -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+ <!-- custom css file link  -->
+ <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+<!-- header section starts -->
+
+
+<header>
+
+  <div id="menu-bar" class="fas fa-bars"></div>
+
+  <a href="#" class="logo"><span>J</span>atrapath</a>
+  
+  <nav class="navbar">
+    <a href="#home">home</a>
+    <a href="#book">book</a>
+    <a href="#packages">packages</a>
+    <a href="#services">services</a>
+    <a href="#gallery">gallery</a>
+    <a href="#review">review</a>
+    <a href="#contact">contact</a>
+  </nav>
+
+  <div class="icons">
+    <i class="fas fa-search" id="search-btn"></i>
+    <i class="fas fa-user" id="login-btn"></i>
+  </div>
+
+  <form action="" class="search-bar-container">
+    <input type="search" id="search-bar" placeholder="search here...">
+    <label for="search-bar" class="fas fa-search"></label>
+  </form>
+
+</header>
+
+<!-- header section ends    -->
+
+<!-- login form container -->
+
+<div class="login-form-container">
+
+  <i class="fas fa-times" id="form-close"></i>
+
+  <form action="#" class="login-form">
+      <h2>Login</h2>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <div class="options">
+        <div class="remember">
+          <input type="checkbox" id="remember">
+          <label for="remember">Remember me</label>
+        </div>
+        <a href="#" class="forgot">Forgot password?</a>
+      </div>
+      <button type="submit" class="btn">Login Now</button>
+      <p class="register">Don't have an account? <a href="#">Register now</a></p>
+    </form>
+  </div>
+
+<!-- home section starts -->
+
+<section class="home" id="home">
+  <div class="content">
+    <h3>Welcome to Jatrapath</h3>
+    <p>discover bangladesh with us.</p>
+    <a href="https://g.co/kgs/ZAiHdwA" class="btn">Basic Info</a>
+  </div>
+
+  <div class="video-container">
+    <video src="Images/vid.mp4" id="video-slider" loop autoplay muted></video>
+  </div>
+
+</section>
+
+<!-- home section ends --> 
+
+
+<!-- book section starts -->
+<section class="book" id="book">
+  <h1 class="heading">
+    <span>b</span>
+    <span>o</span>
+    <span>o</span>
+    <span>k</span>
+    <span class="space"></span>
+    <span>n</span>
+    <span>o</span>
+    <span>w</span>
+  </h1>
+
+  <div class="row">
+    <div class="image">
+      <img src="Images/book99now.png" alt="">
+    </div>
+    <form action="">
+      <div class="inputBox">
+        <h3>where to</h3>
+        <input type="text" placeholder="place name">
+      </div>
+      <div class="inputBox">
+        <h3>how many</h3>
+        <input type="number" placeholder="number of guests">
+      </div>
+      <div class="inputBox">
+        <h3>arrivals</h3>
+        <input type="date">
+      </div>
+      <div class="inputBox">
+        <h3>leaving</h3>
+        <input type="date">
+      </div>
+      <input type="submit" class="btn" value="book now">
+    </form>
+  </div>
+</section>
+
+
+<!-- book section ends -->
+
+
+<!-- packages section starts -->
+
+
+<section class="packages" id="packages">
+
+  <h1 class="heading">
+    <span>p</span>
+    <span>a</span>
+    <span>c</span>
+    <span>k</span>
+    <span>a</span>
+    <span>g</span>
+    <span>e</span>
+    <span>s</span>
+  </h1>
+
+  <div class="box-container">
+
+    <div class="box">
+      <img src="images/sundorbon2.jpg" alt="">
+      <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i> Sundarbans </h3>
+        <p>The world’s largest mangrove forest, a UNESCO
+           World Heritage Site, home to the Royal Bengal Tiger and diverse wildlife. Ideal for boat
+           tours and nature enthusiasts. Best visited from October to March</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="price"> BDT - 8999.00 </div>
+        <a href="#" class="btn">book now</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="images/cox.jpg" alt="">
+      <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i> Cox’s Bazar </h3>
+        <p>Features the world’s longest natural
+           sandy sea beach, stretching over 120 km.
+            Offers swimming, surfing, and stunning 
+            sunsets. Key attractions include Himchari Waterfall and Inani Beach.</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="price"> BDT - 9999.00 </div>
+        <a href="#" class="btn">book now</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="images/Srimangal.jpg" alt="">
+      <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i> Srimangal </h3>
+        <p>Known as the tea capital of Bangladesh, with lush tea 
+          gardens and the Lawachara National Park. Perfect for tea 
+          tasting and nature treks.</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="price"> BDT - 6900.00 </div>
+        <a href="#" class="btn">book now</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="images/Dhakayo.jpg" alt="">
+      <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i> Dhaka </h3>
+        <p>The vibrant capital with historical sites like Lalbagh 
+          Fort, Ahsan Manzil (Pink Palace), and the National Museum. 
+          Offers a mix of modern and traditional experiences.</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="price"> BDT - 11999.00 </div>
+        <a href="#" class="btn">book now</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="images/Rangamati.jpg" alt="">
+      <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i> Rangamati </h3>
+        <p>Located in the Chittagong Hill Tracts, known for Kaptai 
+          Lake and indigenous cultures. Ideal for boating and scenic
+           hill views</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="price"> BDT - 79000.00 </div>
+        <a href="#" class="btn">book now</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="images/Bandarban.jpg" alt="">
+      <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i> Bandarban </h3>
+        <p>A hilly district with trekking trails, waterfalls, and the
+           highest peak, Keokradong. Offers a serene escape with vibrant
+            tribal culture</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="price"> BDT - 98999.00 </div>
+        <a href="#" class="btn">book now</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- packages section ends -->
+
+
+<!-- services section starts -->
+<section class="services" id="services">
+
+  <h1 class="heading">
+    <span>s</span>
+    <span>e</span>
+    <span>r</span>
+    <span>v</span>
+    <span>i</span>
+    <span>c</span>
+    <span>e</span>
+    <span>s</span>
+  </h1>
+
+  <div class="box-container">
+
+    <div class="box">
+      <i class="fas fa-hotel"></i>
+      <h3>affordable hotels</h3>
+      <p>Jatrapath highlights a range of hotels across Bangladesh, from budget stays to comfortable boutique
+         options. Each recommendation includes honest pros and cons based on location, cleanliness, service, 
+         and value. Whether you're in the hills or the city, find stays that suit your style and budget.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-utensils"></i>
+      <h3>food and drinks</h3>
+      <p>Discover Bangladesh’s rich culinary scene with Jatrapath—from street-side fuchka to traditional rice
+         and curry meals. We share honest reviews on taste, hygiene, and local favorites you shouldn't miss. 
+         Stay refreshed with regional drinks like cha (tea), borhani, and seasonal juices.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-bullhorn"></i>
+      <h3>safty guide</h3>
+      <p>Stay informed with Jatrapath’s essential safety guide for traveling in Bangladesh. We cover tips on 
+        transportation, local customs, health precautions, and areas to avoid. Travel confidently with practical
+         advice tailored for both first-time and experienced visitors.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-globe-asia"></i>
+      <h3>around the world</h3>
+      <p>Explore the world beyond borders with Jatrapath’s global travel insights. From cultural gems to hidden 
+        retreats, we highlight destinations worth discovering with honesty and authenticity. Travel smarter, wherever
+         you go.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-plane"></i>
+      <h3>fastest travel</h3>
+      <p>Travel faster with Jatrapath’s guide to efficient routes and transport options across Bangladesh. Discover the
+         quickest ways to reach top destinations by air, rail, or road. Save time and explore more with smart travel planning.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-hiking"></i>
+      <h3>adventures</h3>
+      <p>Embrace the thrill of adventure with Jatrapath! From trekking the hill trails of Bandarban to exploring the mangrove
+         forests of Sundarbans, we guide you to Bangladesh’s wildest experiences. Get honest tips on what to expect, what to pack,
+          and how to stay safe.</p>
+    </div>
+  </div>
+</section>
+
+<!-- services section ends -->
+
+<!-- gallery section starts -->
+
+<section class="gallery" id="gallery">
+
+  <h1 class="heading">
+    <span>g</span>
+    <span>a</span>
+    <span>l</span>
+    <span>l</span>
+    <span>e</span>
+    <span>r</span>
+    <span>y</span>
+  </h1>
+
+  <div class="box-container">
+
+    <div class="box">
+      <img src="Images/up01.jpg" alt="">
+      <div class="content">
+        <h3>The Land of Silence</h3>
+        <p>Sundarban, Bagerhat, Bangladesh</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+      <img src="Images/up02.jpg" alt="">
+      <div class="content">
+        <h3>Moment was during afternoon.</h3>
+        <p>Rural Life, Comilla, Bangladesh</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+      <img src="Images/up03.jpg" alt="">
+      <div class="content">
+        <h3>Yellow Melody</h3>
+        <p>Dhamsona Union Parishad Road, Bangladesh</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+      <img src="Images/up04.jpg" alt="">
+      <div class="content">
+        <h3>Ancient Lifeline</h3>
+        <p>Buriganga River in Dhaka</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+      <img src="Images/up05.jpg" alt="">
+      <div class="content">
+        <h3>Sunset in Beach</h3>
+        <p>Nijhum Dwip Beach, Bangladesh.</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+      <img src="Images/up06.jpg" alt="">
+      <div class="content">
+        <h3>Spotted Deer</h3>
+        <p>Sundarbans, Satkhira, Bangladesh</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+      <img src="Images/up07.jpg" alt="">
+      <div class="content">
+        <h3>Uncommon Beauty</h3>
+        <p>Guliakhali Sea Beach, Muradpur, Bangladesh</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+      <img src="Images/up08.jpg" alt="">
+      <div class="content">
+        <h3>Resort</h3>
+        <p>Mawna Union, Bangladesh</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+      <img src="Images/up99.jpg" alt="">
+      <div class="content">
+        <h3>Tower of Independence</h3>
+        <p>Shadhinata Sharani, Dhaka, Bangladesh</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- gallery section ends -->
+
+
+<!-- review section starts  -->
+
+<section class="review" id="review">
+
+  <h1 class="heading">
+    <span>r</span>
+    <span>e</span>
+    <span>v</span>
+    <span>i</span>
+    <span>e</span>
+    <span>w</span>
+  </h1>
+
+  <div class="swiper-container review-slider">
+
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <div class="box">
+          <img src="images/mahia.jpg" alt="">
+          <h3>Mahia Afreen</h3>
+          <p>I love how Jatrapath doesn’t sugarcoat things. The reviews are real, with both pros and cons
+             clearly listed, which helped me plan smarter. It’s not just another travel site—it feels like
+             advice from a well-traveled local friend. Highly recommend for anyone exploring Bangladesh 
+             authentically!</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <img src="images/warisha.jpg" alt="">
+          <h3>Jannatul Warisa</h3>
+          <p>Jatrapath gave me exactly what I needed—clear, honest information without the travel hype.
+             The pros and cons helped me avoid tourist traps and find places that matched my interests.
+             A great resource for travelers who value authenticity over luxury.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <img src="images/shipu.jpg" alt="">
+          <h3>Arifa Akter Shipu</h3>
+          <p>Jatrapath stands out with its genuine approach to travel. I appreciated the local insights, 
+            practical tips, and realistic expectations. It made my trip feel more personal and meaningful—like
+            I truly connected with Bangladesh beyond just sightseeing.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <img src="images/zulkee.jpg" alt="">
+          <h3>Zulkjlee Sami</h3>
+          <p>Jatrapath is refreshingly honest. No overhyped descriptions—just real advice that helped me plan
+            the perfect trip. The pros and cons format is super helpful, and the site feels like it’s built by
+            travelers, for travelers.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <img src="images/safeat.jpg" alt="">
+          <h3>Safeat Mostafa</h3>
+          <p>Jatrapath cuts through the noise with straightforward reviews and useful travel tips. 
+            I found places I wouldn’t have discovered otherwise. It’s perfect if you want real experiences
+            instead of touristy guides.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <img src="images/labib.jpg" alt="">
+          <h3>Umair Labib</h3>
+          <p>Jatrapath gave me a deeper look into Bangladesh than any other site. The honest pros and
+            cons helped me choose the right places for my interests. It felt like traveling with inside 
+            knowledge, not just following a brochure.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- review section ends -->
+
+
+
+
+<!-- contact section starts -->
+
+<section class="contact" id="contact">
+
+  <h1 class="heading">
+    <span>c</span>
+    <span>o</span>
+    <span>n</span>
+    <span>t</span>
+    <span>a</span>
+    <span>c</span>
+    <span>t</span>
+  </h1>
+
+  <div class="row">
+
+    <div class="image">
+      <img src="images/contact-img.svg" alt="">
+    </div>
+
+    <form action="">
+      <div class="inputBox">
+        <input type="text" placeholder="name">
+        <input type="email" placeholder="email">
+      </div>
+      <div class="inputBox">
+        <input type="number" placeholder="number">
+        <input type="text" placeholder="subject">
+      </div>
+      <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
+      <input type="submit" class="btn" value="send message">
+    </form>
+
+  </div>
+
+</section>
+
+<!-- contact section ends -->
+
+
+
+<!-- brand section starts -->
+
+
+<section class="brand-container">
+
+  <div class="swiper-container brand-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/1.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/2.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/3.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/4.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/5.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/6.jpg" alt=""></div>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- brand section ends -->
+
+
+<!-- footer section starts -->
+
+<section class="footer">
+
+  <div class="box-container">
+
+    <div class="box">
+      <h3>about us</h3>
+      <p>Jatrapath offers authentic insights into Bangladesh’s top destinations 
+        helping you travel smarter with honest, meaningful experiences.</p>
+    </div>
+    <div class="box">
+      <h3>branch locations</h3>
+      <a href="#">Gulsan</a>
+      <a href="#">Banani</a>
+      <a href="#">Khilgoan</a>
+      <a href="#">Motijheel</a>
+    </div>
+    <div class="box">
+      <h3>quick links</h3>
+      <a href="#">home</a>
+      <a href="#">book</a>
+      <a href="#">packages</a>
+      <a href="#">services</a>
+      <a href="#">gallery</a>
+      <a href="#">review</a>
+      <a href="#">contact</a>
+    </div>
+    <div class="box">
+      <h3>follow us</h3>
+      <a href="https://www.facebook.com/">facebook</a>
+      <a href="https://www.instagram.com/">instagram</a>
+      <a href="https://x.com/">X</a>
+      <a href="https://www.linkedin.com/">linkedin</a>
+    </div>
+  </div>
+  <h1 class="credit"> Developed by <span> Khadijatul Kubra, Mohammad Mutakabbir Hossain & Badhon Kumar Roy </span> | All right reserved 2025 </h1>
+</section>
+
+<!-- footer section ends -->
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link -->
+<script src="script.js"></script>
+
+</body>
+</html>
