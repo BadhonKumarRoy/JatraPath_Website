@@ -68,7 +68,8 @@ const Header = () => {
           <li className="dropdown">
             <a href="#">More ▾</a>
 
-            <ul className="dropdown-menu">
+            <div className="dropdown-menu-div">
+              <ul className="dropdown-menu">
               <li>
                 <NavLink
                   to="/blog"
@@ -130,6 +131,7 @@ const Header = () => {
                 </a>
               </li>
             </ul>
+            </div>
           </li>
         </ul>
 

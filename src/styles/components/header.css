@@ -4,6 +4,10 @@
   margin: 0;
   padding: 0;
 }
+header{
+  position: relative;
+  z-index: 1000;
+}
 :root {
   --nav-h: 64px;
   --accent: #1d9e75;
@@ -90,6 +94,13 @@ nav {
 .dropdown {
   position: relative;
 }
+/* .dropdown-menu-div {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: max-content;
+  filter: blur(10px);
+} */
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -103,7 +114,7 @@ nav {
     opacity 0.2s ease-out,
     transform 0.2s ease-out;
 
-  background: transparent;
+  backdrop-filter: blur(15px);
   border: 2px solid rgb(255, 255, 255);
   border-radius: 10px;
   padding: 6px;
