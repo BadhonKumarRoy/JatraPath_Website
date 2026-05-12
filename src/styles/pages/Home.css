@@ -8,7 +8,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 800px;
+    /* height: 800px;  <-- REMOVE THIS */
+    min-height: 80vh; /* Use this instead if you want a minimum size */
     overflow: hidden;
 }
 .circle1 {

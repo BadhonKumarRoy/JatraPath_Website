@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "../styles/components/header.css";
 
 const Header = () => {
@@ -9,58 +10,203 @@ const Header = () => {
   return (
     <header style={{ position: "relative" }}>
       <nav>
-        <a href="/" className="logo"><span>J</span>atraPath</a>
+        <NavLink to="/" className="logo">
+          <span>J</span>atraPath
+        </NavLink>
 
         <ul className="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/destinations">Destinations</a></li>
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "active-link" : ""
+              }
+            >
+              Home
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="/destinations"
+              className={({ isActive }) =>
+                isActive ? "active-link" : ""
+              }
+            >
+              Destinations
+            </NavLink>
+          </li>
 
           <li className="dropdown">
-            <a href="#">Services +</a>
+            <a href="#">Services ▾</a>
+
             <ul className="dropdown-menu">
-              <li><a href="/gift-cards">Gift Cards</a></li>
-              <li><a href="/safety-info">Safety Info</a></li>
+              <li>
+                <NavLink
+                  to="/gift-cards"
+                  className={({ isActive }) =>
+                    isActive ? "active-link" : ""
+                  }
+                >
+                  Gift Cards
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  to="/safety-info"
+                  className={({ isActive }) =>
+                    isActive ? "active-link" : ""
+                  }
+                >
+                  Safety Info
+                </NavLink>
+              </li>
             </ul>
           </li>
 
           <li className="dropdown">
-            <a href="#">More +</a>
+            <a href="#">More ▾</a>
+
             <ul className="dropdown-menu">
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="/contact">Contact</a></li>
-              <li><a href="/faq">FAQ</a></li>
-              <li><a href="/terms">Terms of Service</a></li>
-              <li><a href="/privacy">Privacy Policy</a></li>
-              <li><a href="/JatraPath_Website/JatraPath_V0.1/old.html">V0.1</a></li>
+              <li>
+                <NavLink
+                  to="/blog"
+                  className={({ isActive }) =>
+                    isActive ? "active-link" : ""
+                  }
+                >
+                  Blog
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  to="/contact"
+                  className={({ isActive }) =>
+                    isActive ? "active-link" : ""
+                  }
+                >
+                  Contact
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  to="/faq"
+                  className={({ isActive }) =>
+                    isActive ? "active-link" : ""
+                  }
+                >
+                  FAQ
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  to="/terms"
+                  className={({ isActive }) =>
+                    isActive ? "active-link" : ""
+                  }
+                >
+                  Terms of Service
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  to="/privacy"
+                  className={({ isActive }) =>
+                    isActive ? "active-link" : ""
+                  }
+                >
+                  Privacy Policy
+                </NavLink>
+              </li>
+
+              <li>
+                <a href="/JatraPath_Website/JatraPath_V0.1/old.html">
+                  V0.1
+                </a>
+              </li>
             </ul>
           </li>
         </ul>
-        <a href="/login" className="login">Login</a>
+
+        <NavLink
+          to="/login"
+          className={({ isActive }) =>
+            isActive ? "login active-login" : "login"
+          }
+        >
+          Login
+        </NavLink>
+
         <button
           className={`hamburger${menuOpen ? " open" : ""}`}
           onClick={() => setMenuOpen(prev => !prev)}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
         >
-          <span /><span /><span />
+          <span />
+          <span />
+          <span />
         </button>
       </nav>
 
       <div className={`mobile-menu${menuOpen ? " open" : ""}`}>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/destinations">Destinations</a></li>
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "active-link" : ""
+              }
+            >
+              Home
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="/destinations"
+              className={({ isActive }) =>
+                isActive ? "active-link" : ""
+              }
+            >
+              Destinations
+            </NavLink>
+          </li>
 
           <li>
             <button
               className="mobile-toggle"
               onClick={() => setServicesOpen(!servicesOpen)}
             >
-              Services +
+              Services ▾
             </button>
 
             <ul className={`mobile-sub${servicesOpen ? " open" : " collapsed"}`}>
-              <li><a href="/gift-cards">Gift Cards</a></li>
-              <li><a href="/safety-info">Safety Info</a></li>
+              <li>
+                <NavLink
+                  to="/gift-cards"
+                  className={({ isActive }) =>
+                    isActive ? "active-link" : ""
+                  }
+                >
+                  Gift Cards
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  to="/safety-info"
+                  className={({ isActive }) =>
+                    isActive ? "active-link" : ""
+                  }
+                >
+                  Safety Info
+                </NavLink>
+              </li>
             </ul>
           </li>
 
@@ -69,22 +215,78 @@ const Header = () => {
               className="mobile-toggle"
               onClick={() => setMoreOpen(!moreOpen)}
             >
-              More +
+              More ▾
             </button>
 
             <ul className={`mobile-sub${moreOpen ? " open" : " collapsed"}`}>
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="/contact">Contact</a></li>
-              <li><a href="/faq">FAQ</a></li>
-              <li><a href="/terms">Terms of Service</a></li>
-              <li><a href="/privacy">Privacy Policy</a></li>
-              <li><a href="/JatraPath_Website/JatraPath_V0.1/old.html">V0.1</a></li>
+              <li>
+                <NavLink
+                  to="/blog"
+                  className={({ isActive }) =>
+                    isActive ? "active-link" : ""
+                  }
+                >
+                  Blog
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  to="/contact"
+                  className={({ isActive }) =>
+                    isActive ? "active-link" : ""
+                  }
+                >
+                  Contact
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  to="/faq"
+                  className={({ isActive }) =>
+                    isActive ? "active-link" : ""
+                  }
+                >
+                  FAQ
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  to="/terms"
+                  className={({ isActive }) =>
+                    isActive ? "active-link" : ""
+                  }
+                >
+                  Terms of Service
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  to="/privacy"
+                  className={({ isActive }) =>
+                    isActive ? "active-link" : ""
+                  }
+                >
+                  Privacy Policy
+                </NavLink>
+              </li>
+
+              <li>
+                <a href="/JatraPath_Website/JatraPath_V0.1/old.html">
+                  V0.1
+                </a>
+              </li>
             </ul>
           </li>
         </ul>
 
-        <a href="/login" className="mobile-login">Login</a>
-        
+        <NavLink to="/login" className="mobile-login">
+          Login
+        </NavLink>
+
         <div className="circle1"></div>
       </div>
     </header>

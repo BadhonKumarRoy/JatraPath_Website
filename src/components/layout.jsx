@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Header from './header.jsx';
 import Footer from './footer.jsx';
 
@@ -6,9 +6,11 @@ const Layout = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className={menuOpen ? "menu-open" : ""}>
+    /* Add 'layout-wrapper' here */
+    <div className={`layout-wrapper ${menuOpen ? "menu-open" : ""}`}>
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <main>{children}</main>
+      {/* Add 'main-content' class here */}
+      <main className="main-content">{children}</main>
       <Footer />
     </div>
   );

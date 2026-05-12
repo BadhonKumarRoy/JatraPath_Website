@@ -8,7 +8,7 @@ const Home = () => {
       <div className="circle2"></div>
         <Layout>
           <div className="content">
-            <h1>Welcome to the Home Page</h1>
+            <h1></h1>
           </div>
         </Layout>
       </div>
