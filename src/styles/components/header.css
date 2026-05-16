@@ -5,8 +5,17 @@
   padding: 0;
 }
 header{
-  position: relative;
-  z-index: 1000;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 999999;
+
+  background: transparent;
+
+  pointer-events: auto;
 }
 :root {
   --nav-h: 64px;
@@ -14,21 +23,31 @@ header{
   --accent-light: #e1f5ee;
 }
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   height: var(--nav-h);
+
   padding: 0 24px;
   padding-right: 6%;
-  background: #ffffff00;
-  /* border-bottom: 0.5px solid rgba(0, 0, 0, 0.12); */
-  position: relative;
+
+  background: rgba(0,0,0,0.18) !important;
+  backdrop-filter: blur(10px);
+
+  z-index: 999999;
 }
 .logo {
   font-family: "Playfair Display", serif;
   font-size: 22px;
   font-weight: 600;
-  color: #111;
+  color: white;
   padding-left: 8%;
   text-decoration: none;
   letter-spacing: -0.5px;
@@ -52,7 +71,7 @@ nav {
   font-size: 14px;
   font-weight: 500;
   font-family: "DM Sans", sans-serif;
-  color: #555;
+  color: white;
   text-decoration: none;
   border-radius: 6px;
   transition:
@@ -62,7 +81,7 @@ nav {
     box-shadow 0.15s ease;
 }
 .nav-links a:hover {
-  color: #111;
+  color: rgb(0, 0, 0);
   background: #ffffff;
   transform: translateY(-2px); /*this creates the “popup”*/
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
@@ -114,8 +133,8 @@ nav {
     opacity 0.2s ease-out,
     transform 0.2s ease-out;
 
-  backdrop-filter: blur(15px);
-  border: 2px solid rgb(255, 255, 255);
+  background-color: rgba(29, 158, 117, 0.493);
+  border: 2px solid #ffffff;
   border-radius: 10px;
   padding: 6px;
   min-width: 160px;
@@ -145,7 +164,7 @@ nav {
   display: block;
   padding: 8px 12px;
   font-size: 13px;
-  color: #666;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 6px;
   transition:
@@ -389,4 +408,14 @@ nav {
 .active-login {
   background: var(--accent);
   color: white !important;
+}
+.scrolled nav{
+  background: rgba(0,0,0,0.75) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
 }

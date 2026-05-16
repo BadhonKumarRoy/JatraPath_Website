@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Layout from "../components/layout.jsx";
+import HeroSlider from "../components/HeroSlider";
 import "./../styles/pages/Home.css";
 
 const slides = [
@@ -43,10 +44,11 @@ const Home = () => {
 
   return (
     <div className="background">
-      <div className="circle1"></div>
-      <div className="circle2"></div>
 
       <Layout>
+
+        <HeroSlider />
+
         <section className="hero">
 
           {/* LEFT */}
@@ -127,3 +129,4 @@ const Home = () => {
 };
 
 export default Home;
+

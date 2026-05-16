@@ -134,15 +134,19 @@ const Header = () => {
             </div>
           </li>
         </ul>
+          <div className="nav-actions">
+          
+          {/* Login Button */}
+            <NavLink
+              to="/login"
+              className={({ isActive }) =>
+                isActive ? "login active-login" : "login"
+              }
+            >
+              Login
+            </NavLink>
 
-        <NavLink
-          to="/login"
-          className={({ isActive }) =>
-            isActive ? "login active-login" : "login"
-          }
-        >
-          Login
-        </NavLink>
+          </div>
 
         <button
           className={`hamburger${menuOpen ? " open" : ""}`}

@@ -1,0 +1,40 @@
+.destinations-page{
+  min-height:100vh;
+
+  padding:130px 8% 80px;
+
+  background:#f5f7fa;
+}
+
+.destination-hero{
+  text-align:center;
+  margin-bottom:70px;
+}
+
+.destination-hero h1{
+  font-size:60px;
+  color:#111;
+  margin-bottom:18px;
+}
+
+.destination-hero p{
+  font-size:18px;
+  color:#666;
+}
+
+.destination-grid{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(320px,1fr));
+
+  gap:40px;
+}
+
+@media(max-width:768px){
+
+.destination-hero h1{
+  font-size:40px;
+}
+
+}

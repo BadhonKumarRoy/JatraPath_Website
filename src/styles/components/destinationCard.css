@@ -1,0 +1,80 @@
+.destination-card{
+  background:white;
+  border-radius:22px;
+  overflow:hidden;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+  transition:.35s ease;
+}
+
+.destination-card:hover{
+  transform:translateY(-10px);
+}
+
+.card-image{
+  width:100%;
+  height:350px;
+  overflow:hidden;
+}
+
+.card-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+  transition:.4s ease;
+}
+
+.destination-card:hover img{
+  transform:scale(1.08);
+}
+
+.destination-content{
+  padding:32px;
+}
+
+.destination-content h3{
+  font-size:36px;
+  margin-bottom:14px;
+  color:#111;
+}
+
+.destination-content p{
+  color:#666;
+  line-height:1.8;
+  margin-bottom:28px;
+  font-size:17px;
+}
+
+/* BUTTON */
+
+.destination-content button{
+  border:none;
+
+  padding:16px 40px;
+
+  border-radius:50px;
+
+  background:#00A779;
+  color:white;
+
+  font-size:17px;
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.3s ease;
+}
+
+/* HOVER */
+
+.destination-content button:hover{
+  background:#6ee7d8;
+
+  color:#064e3b;
+
+  transform:translateY(-2px);
+
+  box-shadow:0 10px 20px rgba(110,231,216,0.35);
+}

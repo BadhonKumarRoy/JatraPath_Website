@@ -8,7 +8,9 @@
   --nav-h: 64px;
   --accent: #1d9e75;
 }
-
+.hero-slider {
+  margin-bottom: 150px;
+}
 /* BACKGROUND */
 .background {
   position: relative;
@@ -268,4 +270,7 @@
   .hero-stats {
     justify-content: center;
   }
+  .hero-slider {
+  margin-bottom: 120px;
+}
 }
