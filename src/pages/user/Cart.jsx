@@ -205,7 +205,7 @@ const Cart = () => {
                     </div>
 
                     <button
-                      onClick={() => removeItem(item.id)}
+                      onClick={() => removeItem(item.id)} className="button_cross"
                     >
                       ✕
                     </button>
