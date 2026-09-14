@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
+import { supabase } from "../lib/supabaseClient";
+
 import "../styles/components/auth.css";
 
 const Auth = () => {
@@ -8,63 +10,67 @@ const Auth = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const form = new FormData(e.target);
+  const form = new FormData(e.target);
 
-    const url = isLogin
-      ? "http://localhost/JatraPath_Website/backend/controllers/login.php"
-      : "http://localhost/JatraPath_Website/backend/controllers/register.php";
+  const email = form.get("email");
+  const password = form.get("password");
 
-    try {
-      const res = await fetch(url, {
-        method: "POST",
-        credentials: "include",
-        body: form,
-      });
+  // Registration
+  if (!isLogin) {
+    const name = form.get("name");
+    const confirmPassword = form.get("confirm_password");
 
-      const text = await res.text();
-
-      console.log(text);
-
-      const data = JSON.parse(text);
-
-      console.log("SERVER RESPONSE:", data);
-
-      if (data.status === "success") {
-        localStorage.setItem("user", JSON.stringify(data.user));
-
-        alert(isLogin ? "Login Success" : "Registration Success");
-        if (data.user.role === "admin") {
-          navigate("/admin");
-        } else {
-          navigate("/user");
-        }
-      }
-      else if (data.status === "invalid_password") {
-        alert("Wrong password");
-      }
-      else if (data.status === "user_not_found") {
-        alert("User not found");
-      }
-      else if (data.status === "email_exists") {
-        alert("Email already registered");
-      }
-      else {
-        console.log("FULL SERVER RESPONSE:", data);
-
-        alert(
-          data.message ||
-          data.error ||
-          JSON.stringify(data)
-        );
-      }
-
-    } catch (err) {
-      console.error(err);
-      alert("Server error or CORS issue");
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
     }
-  };
+
+    const { data, error } = await supabase.auth.signUp({
+      email: email,
+      password: password,
+      options: {
+        data: {
+          name: name,
+        },
+      },
+    });
+
+    if (error) {
+      console.error("Registration error:", error);
+      alert(error.message);
+      return;
+    }
+
+    console.log("REGISTERED USER:", data.user);
+
+    alert("Registration Success");
+
+    setIsLogin(true);
+    return;
+  }
+
+  // Login
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email: email,
+    password: password,
+  });
+
+  if (error) {
+    console.error("Login error:", error);
+    alert(error.message);
+    return;
+  }
+
+  console.log("LOGGED IN USER:", data.user);
+
+  localStorage.setItem("user", JSON.stringify(data.user));
+
+  alert("Login Success");
+
+  navigate("/user");
+};
 
   return (
     <div className="auth-wrapper">
