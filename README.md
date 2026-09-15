@@ -5,7 +5,7 @@
 JatraPath is a **Smart Tourism Management System** developed as a university project for the **Software Engineering and System Analysis Lab** course.
 
 - **Academic Year:** 2nd Year, 2nd Semester
-- **Semester:** 4th Semester
+- **Semester:** Autumn 2026
 - **University:** University of Information Technology and Sciences
 - **Team:** Binary Explorers
 
